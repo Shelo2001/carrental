@@ -1,9 +1,9 @@
 'use client'
-import { Combobox, Transition } from '@headlessui/react'
-import { SearchManufacturerProps } from '@/types'
 import Image from 'next/image'
-import React, { useState, Fragment } from 'react'
+import { Fragment, useState } from 'react'
+import { Combobox, Transition } from '@headlessui/react'
 import { manufacturers } from '@/constants'
+import { SearchManufacturerProps } from '@/types'
 
 const SearchManufacturer = ({
   manufacturer,
@@ -58,7 +58,7 @@ const SearchManufacturer = ({
                   value={query}
                   className='search-manufacturer__option'
                 >
-                  Not found "{query}"
+                  Create "{query}"
                 </Combobox.Option>
               ) : (
                 filteredManufacturers.map((item) => (
