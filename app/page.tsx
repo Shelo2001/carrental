@@ -38,7 +38,9 @@ export default async function Home({ searchParams }: HomeProps) {
           <section>
             <div className='home__cars-wrapper'>
               {allCars?.cars?.map((car: CarProps) => (
-                <CarCard car={car} />
+                <div key={car.make}>
+                  <CarCard car={car} />
+                </div>
               ))}
             </div>
             <ShowMore isNext={(searchParams.limit || 8) > allCars.total} />
